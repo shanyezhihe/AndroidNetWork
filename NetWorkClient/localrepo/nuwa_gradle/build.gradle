@@ -1,0 +1,30 @@
+apply plugin: 'groovy'
+
+// 用于发布本地maven库
+apply plugin: 'maven'
+
+def versionName = "1.5.0"
+group "cn.jiajixin.nuwa"
+version versionName
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile gradleApi()
+    compile fileTree(dir: 'libs', includes: ['*.jar'])
+//    compile 'commons-io:commons-io:1.4'
+//    compile 'commons-codec:commons-codec:1.6'
+//    compile 'org.ow2.asm:asm:5.0.3'
+}
+
+// 声明发布maven库的task,用gradle执行即可发布到指定url
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: uri('../'))
+        }
+    }
+}
+

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.HomeActivity">
+    <include layout="@layout/toolbar_layout"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/btn_netserver"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:text="请求网络服务器"
+            android:gravity="center"
+            />
+        <Button
+            android:id="@+id/btn_localserver"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:text="请求本地服务器"
+            android:gravity="center"
+            />
+
+        <Button
+            android:id="@+id/btn_broad_sms"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:text="监听系统广播获取验证码"
+            android:gravity="center"
+            />
+        <Button
+            android:id="@+id/btn_db_sms"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:text="监听数据库获取验证码"
+            android:gravity="center"
+            />
+    </LinearLayout>
+
+</LinearLayout>
